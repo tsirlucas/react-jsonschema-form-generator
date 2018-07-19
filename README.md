@@ -115,5 +115,6 @@ The following mockup gives a basic idea of the desired user interface. During th
 ## Technical considerations
 - To ease the start for you, we setup a basic React app based on [Create React App](https://github.com/facebook/create-react-app). But feel free to remove it and use your own setup / boilerplate instead.
 - Please use the following technologies unless you name us an alternative with a good reason.
-    - React and Jest with [github.com/facebookincubator/create-react-app](http://github.com/facebookincubator/create-react-app)
+    - React (latest version)
+    - Jest
     - Redux to fit into our existing product architecture
