@@ -26,18 +26,23 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
     return {schema: nextProps.schema.toJS()};
   }
 
-  private handleChange = (e: React.FormEvent<FormControl>) => {
+  private create = (option: string) => () => {
+    this.props.actions.addToSchema({path: ['properties'], element: option});
+  };
+
+  private createFromChild = (path: string[], option: string) => {
+    const newPath = ['properties', ...path];
+    this.props.actions.addToSchema({path: newPath, element: option});
+  };
+
+  private update = (e: React.FormEvent<FormControl>) => {
     const value = (e.target as HTMLTextAreaElement).value;
     this.props.actions.updateSchema({path: ['title'], value});
   };
 
-  protected handleChangesFromChild = (path: string[], value: string | number) => {
+  protected updateFromChild = (path: string[], value: string | number) => {
     const newPath = ['properties', ...path];
     this.props.actions.updateSchema({path: newPath, value});
-  };
-
-  private onAdd = (option: string) => () => {
-    this.props.actions.addToSchema({path: ['properties'], element: option});
   };
 
   public render() {
@@ -45,20 +50,17 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
     const propertiesKeys = Object.keys(properties);
     return (
       <form>
-        <TitleInput
-          label="Title input"
-          value={this.state.schema.title}
-          onChange={this.handleChange}
-        />
+        <TitleInput label="Title input" value={this.state.schema.title} onChange={this.update} />
         {propertiesKeys.map((key) => (
           <AnyField
             key={key}
             elementKey={key}
             element={properties[key]}
-            updateWithParentPath={this.handleChangesFromChild}
+            updateWithParentPath={this.updateFromChild}
+            createWithParentPath={this.createFromChild}
           />
         ))}
-        <AddButton onSelect={this.onAdd} />
+        <AddButton onSelect={this.create} />
       </form>
     );
   }

@@ -6,6 +6,7 @@ export interface IProps {
   elementKey: string;
   fieldSchema: TAnyField;
   updateWithParentPath: (path: string[], value: string | number) => void;
+  createWithParentPath: (path: string[], option: string) => void;
 }
 
 export class Field extends React.Component<IProps> {
