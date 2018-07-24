@@ -1,6 +1,6 @@
 import {TAnyField} from 'src/models/AnyField';
 
-export interface ISchema {
+export interface IGroup {
   type: 'object';
   title: string;
   properties: {

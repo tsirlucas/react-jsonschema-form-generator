@@ -1,1 +1,1 @@
-export const FormBuilder = () => null;
+export * from 'src/components/FormBuilder/FormBuilder.container';

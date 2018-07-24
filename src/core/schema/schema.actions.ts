@@ -1,10 +1,8 @@
 import {createAction} from 'redux-act';
 
-import {IField} from 'src/models';
-
 interface IUpdatePayload {
-  path: string;
-  value: IField;
+  path: string[];
+  value: string | number;
 }
 
 export const actions = {

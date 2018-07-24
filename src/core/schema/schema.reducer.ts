@@ -8,12 +8,13 @@ export const initialState = {
   data: Map({
     type: 'object',
     title: 'Your Form',
+    properties: {},
   } as ISchema),
 };
 
 export const schema = createReducer({}, initialState.data).on(
   actions.updateSchema,
-  (state) => state,
+  (state, payload) => state.setIn(payload.path, payload.value),
 );
 
 export type UserState = typeof initialState;

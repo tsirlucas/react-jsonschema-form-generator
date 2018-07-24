@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {Col, Grid} from 'react-bootstrap';
 import {Provider} from 'react-redux';
-import {FormBuilder, FormPreview} from 'components';
-import {store} from 'core/store';
+import {FormBuilder, FormPreview} from 'src/components';
+import {store} from 'src/core/store';
 
 import '../App.css';
 

@@ -1,14 +1,13 @@
 import * as React from 'react';
 import Form from 'react-jsonschema-form';
 import {connect} from 'react-redux';
-import {ISchema} from 'models';
-
 import {
   mapDispatchToProps,
   mapStateToProps,
   TMapDispatchToProps,
   TMapStateToProps,
-} from './FormPreview.selectors';
+} from 'src/components/FormPreview/FormPreview.selectors';
+import {ISchema} from 'src/models';
 
 type TProps = TMapStateToProps & TMapDispatchToProps;
 interface IState {
