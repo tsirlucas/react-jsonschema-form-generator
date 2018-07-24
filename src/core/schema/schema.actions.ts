@@ -5,7 +5,13 @@ interface IUpdatePayload {
   value: string | number;
 }
 
+interface IAddToPayload {
+  path: string[];
+  element: string;
+}
+
 export const actions = {
+  addToSchema: createAction<IAddToPayload>('schema/ADD_TO_SCHEMA'),
   updateSchema: createAction<IUpdatePayload>('schema/UPDATE_SCHEMA'),
 };
 

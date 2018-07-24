@@ -1,9 +1,3 @@
-import {TAnyField} from 'src/models/AnyField';
+import {ISchema} from './Schema';
 
-export interface IGroup {
-  type: 'object';
-  title: string;
-  properties: {
-    [index: string]: TAnyField;
-  };
-}
+export type IGroup = ISchema;

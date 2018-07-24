@@ -1,2 +1,3 @@
 export * from 'src/models/Schema';
 export * from 'src/models/Field';
+export * from 'src/models/AnyField';
