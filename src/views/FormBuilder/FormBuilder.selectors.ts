@@ -1,7 +1,6 @@
 import {Action, bindActionCreators, Dispatch} from 'redux';
 
-import {RootState} from 'core';
-import {actions as schemaActions} from 'core/schema';
+import {actions as schemaActions, RootState} from 'core';
 
 export const mapStateToProps = ({schema}: RootState) => ({
   schema,
@@ -12,6 +11,7 @@ export const mapDispatchToProps = (dispatch: Dispatch<Action>) => ({
     {
       updateSchema: schemaActions.updateSchema,
       addToSchema: schemaActions.addToSchema,
+      removeFromSchema: schemaActions.removeFromSchema,
     },
     dispatch,
   ),

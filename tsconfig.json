@@ -18,7 +18,9 @@
 		"views": ["src/views/index.ts"],
 		"views/*": ["src/views/*"],
 		"core": ["src/core/index.ts"],
-		"core/*": ["src/core/*"]
+    "core/*": ["src/core/*"],
+    "utils": ["src/utils/index.ts"],
+		"utils/*": ["src/utils/*"]
 	  },
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import {FormControl} from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {AddButton} from 'components/AddButton';
-import {TitleInput} from 'components/TitleInput';
+import {AddButton} from 'components';
+import {TitleInput} from 'components';
 import {ISchema} from 'models';
 
 import {AnyField} from './Fields';
@@ -46,6 +46,11 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
     this.props.actions.updateSchema({path: newPath, value});
   };
 
+  protected removeFromChild = (path: string[]) => {
+    const newPath = ['properties', ...path];
+    this.props.actions.removeFromSchema(newPath);
+  };
+
   public render() {
     const {properties} = this.state.schema;
     const propertiesKeys = Object.keys(properties);
@@ -59,6 +64,7 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
             element={properties[key]}
             updateWithParentPath={this.updateFromChild}
             createWithParentPath={this.createFromChild}
+            removeWithParentPath={this.removeFromChild}
           />
         ))}
         <AddButton onSelect={this.create} />

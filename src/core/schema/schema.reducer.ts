@@ -26,4 +26,11 @@ export const schema = createReducer({}, initialState.data)
     const key = uuid();
     const pathWithKey = [...path, key];
     return state.setIn(pathWithKey, Map(schemas[element]));
+  })
+  .on(actions.removeFromSchema, (state, path) => {
+    const lastPath = path[path.length - 1];
+    if (lastPath === 'items') {
+      return state.setIn(path, Map({}));
+    }
+    return state.removeIn(path);
   });

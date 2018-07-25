@@ -1,5 +1,4 @@
 import * as React from 'react';
-import {Tab, Tabs} from 'react-bootstrap';
 import {AddButton, TitleInput} from 'components';
 import {IGroup} from 'models';
 
@@ -21,30 +20,34 @@ export class GroupField extends Field {
     this.props.updateWithParentPath(newPath, value);
   };
 
+  protected removeWithChildValue = (path: string[]) => {
+    const newPath = [this.props.elementKey, 'properties', ...path];
+    this.props.removeWithParentPath(newPath);
+  };
+
   public render() {
     const {properties} = this.props.fieldSchema as IGroup;
     const propertiesKeys = Object.keys(properties);
 
     return (
-      <Tabs id={this.props.elementKey}>
-        <Tab className="gray-tab" title="Group field">
-          <TitleInput
-            label="Title input"
-            value={this.props.fieldSchema.title}
-            onChange={this.handleChange('title')}
+      <>
+        <TitleInput
+          label="Title input"
+          value={this.props.fieldSchema.title}
+          onChange={this.handleChange('title')}
+        />
+        {propertiesKeys.map((key) => (
+          <AnyField
+            key={key}
+            elementKey={key}
+            element={properties[key]}
+            updateWithParentPath={this.updateWithChildValue}
+            createWithParentPath={this.createWithChildValue}
+            removeWithParentPath={this.removeWithChildValue}
           />
-          {propertiesKeys.map((key) => (
-            <AnyField
-              key={key}
-              elementKey={key}
-              element={properties[key]}
-              updateWithParentPath={this.updateWithChildValue}
-              createWithParentPath={this.createWithChildValue}
-            />
-          ))}
-          <AddButton onSelect={this.create} />
-        </Tab>
-      </Tabs>
+        ))}
+        <AddButton onSelect={this.create} />
+      </>
     );
   }
 }

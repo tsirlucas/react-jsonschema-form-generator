@@ -7,6 +7,7 @@ export interface IProps {
   fieldSchema: TAnyField;
   updateWithParentPath: (path: string[], value: string | number) => void;
   createWithParentPath: (path: string[], option: string) => void;
+  removeWithParentPath: (path: string[]) => void;
 }
 
 export class Field extends React.Component<IProps> {
@@ -14,10 +15,5 @@ export class Field extends React.Component<IProps> {
     const value = (e.target as HTMLTextAreaElement).value;
     const path = [this.props.elementKey, key];
     this.props.updateWithParentPath(path, value);
-  };
-
-  protected updateWithChildValue = (path: string[], value: string | number) => {
-    const newPath = [this.props.elementKey, ...path];
-    this.props.updateWithParentPath(newPath, value);
   };
 }

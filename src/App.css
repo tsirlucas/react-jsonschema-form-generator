@@ -9,11 +9,7 @@
 }
 
 .mg-t-xl {
-  margin-top: 30px;
-}
-
-.mg-b-xl {
-  margin-bottom: 30px;
+  margin-top:
 }
 
 .nav-tabs {
@@ -23,7 +19,7 @@
 .tab-content {
   padding: 15px;
   padding-bottom: 20px;
-  border-radius: 0 7px 7px 7px;
+  border-radius: 0 0px 7px 7px;
 }
 
 .nav-tabs li {
@@ -39,4 +35,18 @@
 
 .tab-content, .nav-tabs li {
   background-color: rgba(169,169,169, .2);
+}
+
+.nav-tabs li:hover, .nav-tabs li a:hover {
+  background-color: rgba(169,169,169, .2);
+}
+
+.nav-tabs .remove-button {
+  pointer-events: auto;
+}
+
+.nav-tabs .remove-button a {
+  margin-right: 0;
+  color: #EF403B;
+
 }
