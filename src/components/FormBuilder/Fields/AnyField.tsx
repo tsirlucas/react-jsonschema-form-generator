@@ -1,12 +1,14 @@
 import * as React from 'react';
 import {TAnyField} from 'models';
-import {GroupField} from 'src/components/FormBuilder/Fields/GroupField';
 
+import {GroupField} from './GroupField';
+import {ListField} from './ListField';
 import {TextField} from './TextField';
 
 export const ANY_FIELD = {
   text: TextField,
   group: GroupField,
+  list: ListField,
 };
 
 interface IProps {
@@ -22,8 +24,7 @@ export const AnyField = ({
   updateWithParentPath,
   createWithParentPath,
 }: IProps) => {
-  const type = elementKey.split('-')[0];
-  const Component = ANY_FIELD[type];
+  const Component = ANY_FIELD[element.class];
 
   return (
     <Component
