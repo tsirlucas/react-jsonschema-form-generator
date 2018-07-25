@@ -1,9 +1,10 @@
-import {Map} from 'immutable';
+import {List, Map} from 'immutable';
 
 export const group = {
   class: 'group',
   type: 'object',
   title: 'Your title',
+  required: List([]),
   properties: Map({}),
 };
 

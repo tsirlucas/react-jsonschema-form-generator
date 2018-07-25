@@ -7,14 +7,7 @@ export const mapStateToProps = ({schema}: RootState) => ({
 });
 
 export const mapDispatchToProps = (dispatch: Dispatch<Action>) => ({
-  actions: bindActionCreators(
-    {
-      updateSchema: schemaActions.updateSchema,
-      addToSchema: schemaActions.addToSchema,
-      removeFromSchema: schemaActions.removeFromSchema,
-    },
-    dispatch,
-  ),
+  actions: bindActionCreators(schemaActions, dispatch),
 });
 
 export type TMapDispatchToProps = ReturnType<typeof mapDispatchToProps>;

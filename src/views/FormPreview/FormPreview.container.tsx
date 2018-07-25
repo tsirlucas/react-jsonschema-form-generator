@@ -1,9 +1,8 @@
 import * as React from 'react';
 import Form from 'react-jsonschema-form';
 import {connect} from 'react-redux';
-import {ISchema} from 'models';
-
-import {mapStateToProps, TMapStateToProps} from './FormPreview.selectors';
+import {ISchema} from 'src/models';
+import {mapStateToProps, TMapStateToProps} from 'src/views/FormPreview/FormPreview.selectors';
 
 type TProps = TMapStateToProps;
 interface IState {
@@ -20,6 +19,7 @@ class FormPreviewComponent extends React.Component<TProps, IState> {
   }
 
   public render() {
+    console.log(JSON.stringify(this.state.schema));
     return <Form schema={this.state.schema} />;
   }
 }

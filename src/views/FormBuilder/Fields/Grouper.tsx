@@ -25,4 +25,9 @@ export class Grouper extends Field {
     const newPath = [...this.getPath(), ...path];
     this.props.removeWithParentPath(newPath);
   };
+
+  protected setRequiredWithChildValue = (path: string[], value: boolean) => {
+    const newPath = [...this.getPath(), ...path];
+    this.props.setRequiredWithParentPath(newPath, value);
+  };
 }

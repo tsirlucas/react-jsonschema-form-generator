@@ -49,6 +49,12 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
   protected removeFromChild = (path: string[]) => {
     const newPath = ['properties', ...path];
     this.props.actions.removeFromSchema(newPath);
+    this.props.actions.setRequiredOnSchema({path: newPath, value: false});
+  };
+
+  protected setRequiredFromChild = (path: string[], value: boolean) => {
+    const newPath = ['properties', ...path];
+    this.props.actions.setRequiredOnSchema({path: newPath, value});
   };
 
   public render() {
@@ -65,6 +71,7 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
             updateWithParentPath={this.updateFromChild}
             createWithParentPath={this.createFromChild}
             removeWithParentPath={this.removeFromChild}
+            setRequiredWithParentPath={this.setRequiredFromChild}
           />
         ))}
         <AddButton onSelect={this.create} />

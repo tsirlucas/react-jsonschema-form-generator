@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {Checkbox} from 'react-bootstrap';
 import {AddButton, TitleInput} from 'components';
 import {IListField} from 'models';
 
@@ -28,9 +29,13 @@ export class ListField extends Grouper {
             updateWithParentPath={this.updateWithChildValue}
             createWithParentPath={this.createWithChildValue}
             removeWithParentPath={this.removeWithChildValue}
+            setRequiredWithParentPath={this.setRequiredWithChildValue}
           />
         ) : (
           <AddButton onSelect={this.create} />
+        )}
+        {this.props.elementKey !== 'items' && (
+          <Checkbox onChange={this.handleRequired}>Required</Checkbox>
         )}
       </>
     );
