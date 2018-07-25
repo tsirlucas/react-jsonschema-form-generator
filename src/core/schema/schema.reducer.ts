@@ -18,6 +18,11 @@ export const initialState = {
 export const schema = createReducer({}, initialState.data)
   .on(actions.updateSchema, (state, {path, value}) => state.setIn(path, value))
   .on(actions.addToSchema, (state, {path, element}) => {
+    const lastPath = path[path.length - 1];
+    if (lastPath === 'items') {
+      return state.setIn(path, Map(schemas[element]));
+    }
+
     const key = uuid();
     const pathWithKey = [...path, key];
     return state.setIn(pathWithKey, Map(schemas[element]));

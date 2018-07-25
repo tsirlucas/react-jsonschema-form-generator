@@ -7,6 +7,13 @@ export const group = {
   properties: Map({}),
 };
 
+export const list = {
+  class: 'list',
+  type: 'array',
+  title: 'Your title',
+  items: Map({}),
+};
+
 export const text = {
   class: 'text',
   type: 'string',
