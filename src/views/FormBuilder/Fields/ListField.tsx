@@ -3,26 +3,11 @@ import {AddButton, TitleInput} from 'components';
 import {IListField} from 'models';
 
 import {AnyField} from './AnyField';
-import {Field} from './Field';
+import {Grouper} from './Grouper';
 
-export class ListField extends Field {
-  private create = (option: string) => () => {
+export class ListField extends Grouper {
+  protected create = (option: string) => () => {
     this.props.createWithParentPath([this.props.elementKey, 'items'], option);
-  };
-
-  private createWithChildValue = (path: string[], option: string) => {
-    const newPath = [this.props.elementKey, ...path];
-    this.props.createWithParentPath(newPath, option);
-  };
-
-  protected updateWithChildValue = (path: string[], value: string | number) => {
-    const newPath = [this.props.elementKey, ...path];
-    this.props.updateWithParentPath(newPath, value);
-  };
-
-  protected removeWithChildValue = (path: string[]) => {
-    const newPath = [this.props.elementKey, ...path];
-    this.props.removeWithParentPath(newPath);
   };
 
   public render() {

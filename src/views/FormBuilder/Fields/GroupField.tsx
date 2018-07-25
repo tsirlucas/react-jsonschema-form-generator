@@ -3,27 +3,10 @@ import {AddButton, TitleInput} from 'components';
 import {IGroup} from 'models';
 
 import {AnyField} from './AnyField';
-import {Field} from './Field';
+import {Grouper} from './Grouper';
 
-export class GroupField extends Field {
-  private create = (option: string) => () => {
-    this.props.createWithParentPath([this.props.elementKey, 'properties'], option);
-  };
-
-  private createWithChildValue = (path: string[], option: string) => {
-    const newPath = [this.props.elementKey, 'properties', ...path];
-    this.props.createWithParentPath(newPath, option);
-  };
-
-  protected updateWithChildValue = (path: string[], value: string | number) => {
-    const newPath = [this.props.elementKey, 'properties', ...path];
-    this.props.updateWithParentPath(newPath, value);
-  };
-
-  protected removeWithChildValue = (path: string[]) => {
-    const newPath = [this.props.elementKey, 'properties', ...path];
-    this.props.removeWithParentPath(newPath);
-  };
+export class GroupField extends Grouper {
+  protected keyPaths = ['properties'];
 
   public render() {
     const {properties} = this.props.fieldSchema as IGroup;

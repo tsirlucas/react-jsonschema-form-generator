@@ -1,15 +1,15 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
 
 .mg-l-md {
-  margin-left: 15px
+  margin-left: 15px;
 }
 
 .mg-b-md {
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .mg-t-xl {
-  margin-top:
+  margin-top: 30px;
 }
 
 .nav-tabs {
@@ -48,5 +48,4 @@
 .nav-tabs .remove-button a {
   margin-right: 0;
   color: #EF403B;
-
 }
