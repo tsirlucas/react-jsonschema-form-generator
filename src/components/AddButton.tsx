@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {DropdownButton, MenuItem} from 'react-bootstrap';
-import {ANY_FIELD} from 'src/components/FormBuilder/Fields';
+import {ANY_FIELD} from 'views/FormBuilder/Fields';
 
 interface IProps {
   onSelect: (option: string) => () => void;

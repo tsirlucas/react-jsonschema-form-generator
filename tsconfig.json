@@ -11,8 +11,6 @@
     "moduleResolution": "node",
 	"rootDir": ".",
 	"paths": {
-		"src": ["src"],
-		"src/*": ["src/*"],
 		"models": ["src/models/index.ts"],
 		"models/*": ["src/models/*"],
 		"components": ["src/components/index.ts"],

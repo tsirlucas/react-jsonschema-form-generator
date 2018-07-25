@@ -1,4 +1,4 @@
-import {IField} from 'src/models/Field';
+import {IField} from './Field';
 
 export interface INumberField extends IField {
   type: 'number';

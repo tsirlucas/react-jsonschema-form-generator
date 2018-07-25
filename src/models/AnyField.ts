@@ -1,7 +1,7 @@
-import {IDateField} from 'src/models/DateField';
-import {IGroup} from 'src/models/Group';
-import {IListField} from 'src/models/ListField';
-import {INumberField} from 'src/models/NumberField';
-import {ITextField} from 'src/models/TextField';
+import {IDateField} from './DateField';
+import {IGroup} from './Group';
+import {IListField} from './ListField';
+import {INumberField} from './NumberField';
+import {ITextField} from './TextField';
 
-export type TAnyField = IGroup | ITextField | INumberField | IDateField | IListField
+export type TAnyField = IGroup | ITextField | INumberField | IDateField | IListField;

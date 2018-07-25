@@ -1,16 +1,17 @@
 import * as React from 'react';
 import {FormControl} from 'react-bootstrap';
 import {connect} from 'react-redux';
-import {AddButton} from 'src/components/AddButton';
-import {AnyField} from 'src/components/FormBuilder/Fields';
+import {AddButton} from 'components/AddButton';
+import {TitleInput} from 'components/TitleInput';
+import {ISchema} from 'models';
+
+import {AnyField} from './Fields';
 import {
   mapDispatchToProps,
   mapStateToProps,
   TMapDispatchToProps,
   TMapStateToProps,
-} from 'src/components/FormBuilder/FormBuilder.selectors';
-import {TitleInput} from 'src/components/TitleInput';
-import {ISchema} from 'src/models';
+} from './FormBuilder.selectors';
 
 type TProps = TMapStateToProps & TMapDispatchToProps;
 interface IState {

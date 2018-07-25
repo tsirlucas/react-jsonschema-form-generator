@@ -1,6 +1,6 @@
 import {$Values} from 'utility-types';
 
-import {TActions as TSchemaActions} from 'src/core/schema';
+import {TActions as TSchemaActions} from './schema';
 
 export type TActions = TSchemaActions;
 

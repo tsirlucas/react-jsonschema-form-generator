@@ -1,2 +1,2 @@
-export * from 'src/core/schema';
-export * from 'src/core/rootReducer';
+export * from './schema';
+export * from './rootReducer';

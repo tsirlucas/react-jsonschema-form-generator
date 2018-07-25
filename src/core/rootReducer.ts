@@ -1,6 +1,6 @@
 import {combineReducers, Reducer} from 'redux';
 
-import {schema} from 'src/core/schema';
+import {schema} from './schema';
 
 const rootReducerObj = {
   schema,

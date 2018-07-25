@@ -1,7 +1,7 @@
 import {createStore} from 'redux';
 
-import {TActionsValues} from 'src/core/rootAction';
-import {rootReducer, RootState} from 'src/core/rootReducer';
+import {TActionsValues} from './rootAction';
+import {rootReducer, RootState} from './rootReducer';
 
 export type RootState = RootState;
 

@@ -1,15 +1,11 @@
 import * as React from 'react';
 import Form from 'react-jsonschema-form';
 import {connect} from 'react-redux';
-import {
-  mapDispatchToProps,
-  mapStateToProps,
-  TMapDispatchToProps,
-  TMapStateToProps,
-} from 'src/components/FormPreview/FormPreview.selectors';
 import {ISchema} from 'src/models';
 
-type TProps = TMapStateToProps & TMapDispatchToProps;
+import {mapStateToProps, TMapStateToProps} from './FormPreview.selectors';
+
+type TProps = TMapStateToProps;
 interface IState {
   schema: ISchema;
 }
@@ -28,7 +24,4 @@ class FormPreviewComponent extends React.Component<TProps, IState> {
   }
 }
 
-export const FormPreview = connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(FormPreviewComponent);
+export const FormPreview = connect(mapStateToProps)(FormPreviewComponent);

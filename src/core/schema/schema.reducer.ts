@@ -2,9 +2,9 @@ import {Map} from 'immutable';
 import {createReducer} from 'redux-act';
 import * as uuid from 'uuid/v4';
 
-import {actions} from 'src/core/schema/schema.actions';
-import {ISchema} from 'src/models';
+import {ISchema} from 'models';
 
+import {actions} from './schema.actions';
 import * as schemas from './schema.mocks';
 
 export const initialState = {
