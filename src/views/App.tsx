@@ -10,8 +10,9 @@ import {FormPreview} from './FormPreview';
 const App = () => (
   <div className="App">
     <Provider store={store}>
-      <Grid>
-        <Col xs={12} md={6}>
+      <Grid className="mg-t-xl mg-b-xl">
+        <Col xs={12} md={6} className="m-b-md">
+          <legend>Your Builder</legend>
           <FormBuilder />
         </Col>
         <Col xs={12} md={6}>

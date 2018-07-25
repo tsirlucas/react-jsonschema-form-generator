@@ -27,9 +27,11 @@ export const AnyField = ({
   const Component = ANY_FIELD[element.class];
 
   return (
-    <Component
-      {...{elementKey, updateWithParentPath, createWithParentPath}}
-      fieldSchema={element}
-    />
+    <div className="mg-l-md mg-b-md">
+      <Component
+        {...{elementKey, updateWithParentPath, createWithParentPath}}
+        fieldSchema={element}
+      />
+    </div>
   );
 };

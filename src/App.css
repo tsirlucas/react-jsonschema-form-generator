@@ -1,1 +1,42 @@
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+
+.mg-l-md {
+  margin-left: 15px
+}
+
+.mg-b-md {
+  margin-bottom: 15px
+}
+
+.mg-t-xl {
+  margin-top: 30px;
+}
+
+.mg-b-xl {
+  margin-bottom: 30px;
+}
+
+.nav-tabs {
+  border: none;
+}
+
+.tab-content {
+  padding: 15px;
+  padding-bottom: 20px;
+  border-radius: 0 7px 7px 7px;
+}
+
+.nav-tabs li {
+  border: none;
+  pointer-events: none;
+  border-radius: 7px 7px 0 0;
+}
+
+.nav-tabs li a {
+  color: black;
+  font-weight: 700;
+}
+
+.tab-content, .nav-tabs li {
+  background-color: rgba(169,169,169, .2);
+}

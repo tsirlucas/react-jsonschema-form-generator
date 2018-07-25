@@ -27,7 +27,7 @@ export class GroupField extends Field {
 
     return (
       <Tabs id={this.props.elementKey}>
-        <Tab title="Group field">
+        <Tab className="gray-tab" title="Group field">
           <TitleInput
             label="Title input"
             value={this.props.fieldSchema.title}
