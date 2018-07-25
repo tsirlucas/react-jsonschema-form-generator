@@ -1,9 +1,8 @@
 import * as React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
+import {AddButton, TitleInput} from 'components';
 import {IListField} from 'models';
-import {AddButton} from 'src/components/AddButton';
 
-import {TitleInput} from '../../TitleInput';
 import {AnyField} from './AnyField';
 import {Field} from './Field';
 

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Tab, Tabs} from 'react-bootstrap';
-import {TitleInput} from '../../TitleInput';
+import {TitleInput} from 'components/TitleInput';
+
 import {Field} from './Field';
 
 export class TextField extends Field {

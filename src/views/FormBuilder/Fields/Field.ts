@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {FormControl} from 'react-bootstrap';
-import {TAnyField} from 'src/models';
+import {TAnyField} from 'models';
 
 export interface IProps {
   elementKey: string;

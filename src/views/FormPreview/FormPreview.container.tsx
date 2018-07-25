@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Form from 'react-jsonschema-form';
 import {connect} from 'react-redux';
-import {ISchema} from 'src/models';
+import {ISchema} from 'models';
 
 import {mapStateToProps, TMapStateToProps} from './FormPreview.selectors';
 
