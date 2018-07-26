@@ -20,7 +20,6 @@ class FormPreviewComponent extends React.Component<TProps, IState> {
   }
 
   public render() {
-    console.log(JSON.stringify(this.state.schema));
     return <Form schema={this.state.schema} />;
   }
 }
