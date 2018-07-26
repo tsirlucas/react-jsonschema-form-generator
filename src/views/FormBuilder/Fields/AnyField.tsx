@@ -4,14 +4,18 @@ import {capitalizeFirstLetter} from 'utils';
 
 import {TAnyField} from 'models';
 
+import {DateField} from './DateField';
 import {GroupField} from './GroupField';
 import {ListField} from './ListField';
+import {NumberField} from './NumberField';
 import {TextField} from './TextField';
 
 export const ANY_FIELD = {
   text: TextField,
+  number: NumberField,
   group: GroupField,
   list: ListField,
+  date: DateField,
 };
 
 interface IProps {

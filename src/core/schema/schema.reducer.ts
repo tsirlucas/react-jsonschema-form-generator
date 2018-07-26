@@ -21,12 +21,12 @@ export const schema = createReducer({}, initialState.data)
   .on(actions.addToSchema, (state, {path, element}) => {
     const lastPath = path[path.length - 1];
     if (lastPath === 'items') {
-      return state.setIn(path, Map(schemas[element]));
+      return state.setIn(path, Map(schemas[`${element}Mock`]));
     }
 
     const key = uuid();
     const pathWithKey = [...path, key];
-    return state.setIn(pathWithKey, Map(schemas[element]));
+    return state.setIn(pathWithKey, Map(schemas[`${element}Mock`]));
   })
   .on(actions.removeFromSchema, (state, path) => {
     const lastPath = path[path.length - 1];
