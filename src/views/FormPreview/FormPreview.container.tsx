@@ -20,7 +20,7 @@ class FormPreviewComponent extends React.Component<TProps, IState> {
   }
 
   public render() {
-    return <Form schema={this.state.schema} />;
+    return <Form liveValidate={true} schema={this.state.schema} />;
   }
 }
 
