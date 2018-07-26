@@ -8,6 +8,10 @@
   margin-bottom: 15px;
 }
 
+.mg-t-md {
+  margin-bottom: 15px;
+}
+
 .mg-t-xl {
   margin-top: 30px;
 }
@@ -48,4 +52,8 @@
 .nav-tabs .remove-button a {
   margin-right: 0;
   color: #EF403B;
+}
+
+.container-fluid {
+  padding: 0;
 }

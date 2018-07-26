@@ -1,19 +1,17 @@
 import * as React from 'react';
 import {FormControl} from 'react-bootstrap';
-import {TAnyField} from 'models';
 
-export interface IProps {
+export interface IProps<T> {
   elementKey: string;
-  fieldSchema: TAnyField;
+  fieldSchema: T;
   updateWithParentPath: (path: string[], value: string | number) => void;
   createWithParentPath: (path: string[], option: string) => void;
   removeWithParentPath: (path: string[]) => void;
   setRequiredWithParentPath: (path: string[], value: boolean) => void;
 }
 
-export class Field extends React.Component<IProps> {
-  protected handleChange = (key: string) => (e: React.FormEvent<FormControl>) => {
-    const {value} = e.target as HTMLTextAreaElement;
+export class Field<T> extends React.Component<IProps<T>> {
+  protected handleChange = (key: string) => (value: string | number) => {
     const path = [this.props.elementKey, key];
     this.props.updateWithParentPath(path, value);
   };

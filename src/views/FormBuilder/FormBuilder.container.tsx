@@ -1,8 +1,7 @@
 import * as React from 'react';
-import {FormControl} from 'react-bootstrap';
 import {connect} from 'react-redux';
 import {AddButton} from 'components';
-import {TitleInput} from 'components';
+import {TextInput} from 'components';
 import {ISchema} from 'models';
 
 import {AnyField} from './Fields';
@@ -36,8 +35,7 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
     this.props.actions.addToSchema({path: newPath, element: option});
   };
 
-  private update = (e: React.FormEvent<FormControl>) => {
-    const value = (e.target as HTMLTextAreaElement).value;
+  private update = (value: string) => {
     this.props.actions.updateSchema({path: ['title'], value});
   };
 
@@ -62,7 +60,7 @@ class FormBuilderComponent extends React.Component<TProps, IState> {
     const propertiesKeys = Object.keys(properties);
     return (
       <form>
-        <TitleInput label="Title input" value={this.state.schema.title} onChange={this.update} />
+        <TextInput label="Form title" value={this.state.schema.title} onChange={this.update} />
         {propertiesKeys.map((key) => (
           <AnyField
             key={key}

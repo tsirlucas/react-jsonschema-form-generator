@@ -1,2 +1,3 @@
 export * from './AddButton';
-export * from './TitleInput';
+export * from './TextInput';
+export * from './NumberInput';

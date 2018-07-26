@@ -13,11 +13,14 @@ export const list = {
   type: 'array',
   title: 'Your title',
   items: Map({}),
+  minItems: 0,
+  maxItems: 20,
 };
 
 export const text = {
   class: 'text',
   type: 'string',
   title: 'Your title',
-  maxLength: 100,
+  minLength: 0,
+  maxLength: 20,
 };

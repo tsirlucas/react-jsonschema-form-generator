@@ -1,6 +1,6 @@
 import {Field} from './Field';
 
-export class Grouper extends Field {
+export class Grouper<T> extends Field<T> {
   protected keyPaths = [] as string[];
 
   protected getPath = () => {
