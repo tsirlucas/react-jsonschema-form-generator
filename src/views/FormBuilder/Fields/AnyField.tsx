@@ -18,7 +18,7 @@ export const ANY_FIELD = {
   date: DateField,
 };
 
-interface IProps {
+export interface IProps {
   elementKey: string;
   element: TAnyField;
   updateWithParentPath: (path: string[], value: string | number) => void;
@@ -29,7 +29,6 @@ interface IProps {
 
 export const AnyField = ({element, ...props}: IProps) => {
   const Component = ANY_FIELD[element.class];
-
   const onSelect = () => {
     props.removeWithParentPath([props.elementKey]);
   };

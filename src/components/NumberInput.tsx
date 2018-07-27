@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ControlLabel, FormControl, FormGroup} from 'react-bootstrap';
 
-interface IProps {
+export interface IProps {
   label: string;
   value: number;
   onChange: (value: number) => void;
