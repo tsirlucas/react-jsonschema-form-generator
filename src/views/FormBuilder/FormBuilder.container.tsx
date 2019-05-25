@@ -2,17 +2,16 @@ import * as React from 'react';
 import {useState, useContext, useEffect, useCallback} from 'react';
 import {AddButton} from 'components';
 import {TextInput} from 'components';
-import {ISchema} from 'models';
 import {SchemaContext} from 'providers';
 
 import {AnyField} from './Fields';
 
 export const FormBuilder = () => {
   const {state, actions} = useContext(SchemaContext);
-  const [schema, setSchema] = useState(state.toJS() as ISchema);
+  const [schema, setSchema] = useState(state);
 
   useEffect(() => {
-    setSchema(state.toJS());
+    setSchema(state);
   }, [state]);
 
   const create = useCallback(

@@ -1,5 +1,3 @@
-import {List, Map} from 'immutable';
-
 export const textMock = {
   class: 'text',
   type: 'string',
@@ -31,8 +29,8 @@ export const groupMock = {
   type: 'object',
   title: 'Your title',
   description: '',
-  required: List([]),
-  properties: Map({}),
+  required: [],
+  properties: {},
 };
 
 export const listMock = {
@@ -40,7 +38,7 @@ export const listMock = {
   type: 'array',
   title: 'Your title',
   description: '',
-  items: Map({}),
+  items: {},
   minItems: 0,
   maxItems: 20,
 };

@@ -6,5 +6,5 @@ import {SchemaContext} from 'providers';
 export const FormPreview = () => {
   const {state} = useContext(SchemaContext);
 
-  return <Form liveValidate={true} schema={state.toJS()} />;
+  return <Form liveValidate={true} schema={state} />;
 };
