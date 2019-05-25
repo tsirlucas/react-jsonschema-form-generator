@@ -23,13 +23,13 @@ describe('schema reducer', () => {
   });
 
   it('should return the initial state', () => {
-    const state = schema(initialState.data, {type: 'ANY'});
-    expect(state.toJS()).toEqual(initialState.data.toJS());
+    const state = schema(initialState, {type: 'ANY'});
+    expect(state.toJS()).toEqual(initialState.toJS());
   });
 
   it('should handle addToSchema', () => {
     const action = actions.addToSchema({path: ['properties'], element: 'text'});
-    const state = schema(initialState.data, action);
+    const state = schema(initialState, action);
 
     expect(state.toJS()).toEqual(mockedText.toJS());
   });
@@ -38,14 +38,14 @@ describe('schema reducer', () => {
     const action = actions.removeFromSchema(['properties', 'mockedKey']);
     const state = schema(mockedText, action);
 
-    expect(state.toJS()).toEqual(initialState.data.toJS());
+    expect(state.toJS()).toEqual(initialState.toJS());
   });
 
   it('should handle updateSchema', () => {
     const action = actions.updateSchema({path: ['title'], value: 'Updated Title'});
-    const state = schema(initialState.data, action);
+    const state = schema(initialState, action);
 
-    expect(state.toJS()).toEqual(initialState.data.setIn(['title'], 'Updated Title').toJS());
+    expect(state.toJS()).toEqual(initialState.setIn(['title'], 'Updated Title').toJS());
   });
 
   it('should handle nested updates', () => {
