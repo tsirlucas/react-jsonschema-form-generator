@@ -1,2 +1,2 @@
 export * from './FormBuilder';
-export * from './FormBuilder';
+export * from './FormPreview';

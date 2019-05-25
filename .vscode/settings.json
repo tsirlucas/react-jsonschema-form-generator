@@ -19,7 +19,7 @@
       "numberOfEmptyLinesAfterGroup": 0
     },
     {
-      "regex": "^(src|views|components|service|core|models|tests)",
+      "regex": "^(src|views|components|service|providers|models|tests)",
       "orderLevel": 25,
     },
     {

@@ -17,8 +17,8 @@
       "components/*": ["src/components/*"],
       "views": ["src/views/index.ts"],
       "views/*": ["src/views/*"],
-      "core": ["src/core/index.ts"],
-      "core/*": ["src/core/*"],
+      "providers": ["src/providers/index.ts"],
+      "providers/*": ["src/providers/*"],
       "utils": ["src/utils/index.ts"],
       "utils/*": ["src/utils/*"]
 	  },

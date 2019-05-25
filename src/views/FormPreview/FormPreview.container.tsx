@@ -1,27 +1,10 @@
 import * as React from 'react';
+import {useContext} from 'react';
 import Form from 'react-jsonschema-form';
-import {connect} from 'react-redux';
-import {ISchema} from 'models';
+import {SchemaContext} from 'providers';
 
-import {mapStateToProps, TMapStateToProps} from './FormPreview.selectors';
+export const FormPreview = () => {
+  const {state} = useContext(SchemaContext);
 
-type TProps = TMapStateToProps;
-interface IState {
-  schema: ISchema;
-}
-
-class FormPreviewComponent extends React.Component<TProps, IState> {
-  public state = {
-    schema: {} as ISchema,
-  };
-
-  public static getDerivedStateFromProps(nextProps: TProps) {
-    return {schema: nextProps.schema.toJS()};
-  }
-
-  public render() {
-    return <Form liveValidate={true} schema={this.state.schema} />;
-  }
-}
-
-export const FormPreview = connect(mapStateToProps)(FormPreviewComponent);
+  return <Form liveValidate={true} schema={state.toJS()} />;
+};
