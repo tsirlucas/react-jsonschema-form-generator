@@ -1,15 +1,13 @@
 import * as React from 'react';
 import {Col, Grid} from 'react-bootstrap';
-import {Provider} from 'react-redux';
-import {store} from 'core/store';
+import {SchemaProvider} from 'providers';
 
-import '../App.css';
-import {FormBuilder} from './FormBuilder';
-import {FormPreview} from './FormPreview';
+import './App.css';
+import {FormBuilder, FormPreview} from './views';
 
 const App = () => (
   <div className="App">
-    <Provider store={store}>
+    <SchemaProvider>
       <Grid className="mg-t-xl mg-b-xl">
         <Col xs={12} md={6} className="m-b-md">
           <legend>Your Builder</legend>
@@ -19,7 +17,7 @@ const App = () => (
           <FormPreview />
         </Col>
       </Grid>
-    </Provider>
+    </SchemaProvider>
   </div>
 );
 

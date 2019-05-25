@@ -7,16 +7,14 @@ import {ISchema} from 'models';
 import {actions} from './schema.actions';
 import * as schemas from './schema.mocks';
 
-export const initialState = {
-  data: Map<string, ISchema>({
-    type: 'object',
-    title: 'Your Form',
-    properties: Map({}),
-    required: List([]),
-  }),
-};
+export const initialState = Map<string, ISchema>({
+  type: 'object',
+  title: 'Your Form',
+  properties: Map({}),
+  required: List([]),
+});
 
-export const schema = createReducer({}, initialState.data)
+export const schema = createReducer({}, initialState)
   .on(actions.updateSchema, (state, {path, value}) => state.setIn(path, value))
   .on(actions.addToSchema, (state, {path, element}) => {
     const lastPath = path[path.length - 1];
@@ -37,7 +35,7 @@ export const schema = createReducer({}, initialState.data)
   })
   .on(
     actions.setRequiredOnSchema,
-    (state, {path, value}): typeof initialState.data => {
+    (state, {path, value}): typeof initialState => {
       const key = path[path.length - 1];
       let pathToEdit = [...path];
 
