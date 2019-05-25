@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {useState, useContext, useEffect, useCallback} from 'react';
 import {AddButton} from 'components';
 import {TextInput} from 'components';

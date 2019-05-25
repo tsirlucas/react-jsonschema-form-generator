@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {useContext} from 'react';
 import Form from 'react-jsonschema-form';
 import {SchemaContext} from 'providers';

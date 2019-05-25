@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {Checkbox} from 'react-bootstrap';
 import {Col, Grid, Row} from 'react-bootstrap';
 import {AddButton, NumberInput, TextInput} from 'components';

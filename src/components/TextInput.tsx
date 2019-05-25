@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {ControlLabel, FormControl, FormGroup} from 'react-bootstrap';
 
 interface IProps {
