@@ -2,6 +2,7 @@
   "name": "react-jsonschema-form-generator",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tsirlucas.github.io/react-jsonschema-form-generator",
   "dependencies": {
     "immutable": "^3.8.2",
     "react": "^16.8.6",
@@ -19,7 +20,9 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom --modulePaths=src --watchAll",
     "coverage": "react-scripts-ts test --coverage --env=jsdom --modulePaths=src",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "@types/enzyme": "^3.1.12",
@@ -34,6 +37,7 @@
     "@types/uuid": "^3.4.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "gh-pages": "^2.0.1",
     "typescript": "^3.4.5",
     "utility-types": "^2.0.0"
   }
