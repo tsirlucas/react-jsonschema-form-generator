@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {Col, Grid} from 'react-bootstrap';
 import {SchemaProvider} from 'providers';
 

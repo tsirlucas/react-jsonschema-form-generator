@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {FormControl} from 'react-bootstrap';
 
 export interface IProps<T> {

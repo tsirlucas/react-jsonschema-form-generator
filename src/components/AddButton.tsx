@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {DropdownButton, MenuItem} from 'react-bootstrap';
 import {ANY_FIELD} from 'views/FormBuilder/Fields';
 

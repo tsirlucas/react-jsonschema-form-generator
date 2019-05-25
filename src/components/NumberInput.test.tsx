@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React from 'react';
 import {FormControl} from 'react-bootstrap';
 import {configure, shallow} from 'enzyme';
-import * as Adapter from 'enzyme-adapter-react-16';
+import Adapter from 'enzyme-adapter-react-16';
 
 import {IProps} from './NumberInput';
 import {NumberInput} from './NumberInput';

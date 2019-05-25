@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {createContext, useReducer, useMemo, ReactNode} from 'react';
 
 import {schema, initialState} from './schema.reducer';
